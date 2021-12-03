@@ -53,5 +53,6 @@ public class MapReduceServer implements Bootable {
 	 */
 	public void startup() {
 		// TODO Auto-generated method stub
+		
 	}
 }

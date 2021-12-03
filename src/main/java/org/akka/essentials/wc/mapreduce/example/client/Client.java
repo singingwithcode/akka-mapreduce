@@ -7,7 +7,7 @@ import com.typesafe.config.*;
 
 public class Client implements Bootable {
 	public Client() {
-		final String fileName = "Othello.txt";
+		final String fileName = "BlackPanther.txt";
 
 		ActorSystem system = ActorSystem.create("ClientApplication",
 				ConfigFactory.load().getConfig("MapReduceClientApp"));
@@ -25,7 +25,13 @@ public class Client implements Bootable {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		System.out.println("TIMER STARTED");
+		long startTime = System.nanoTime();
 		new Client();
+		long endTime = System.nanoTime();
+		double dur = ((double)(endTime - startTime)/502277739);
+
+		System.out.println("TIMER STOPPED, DURATION: " + dur + "ms");
 	}
 
 	public void shutdown() {

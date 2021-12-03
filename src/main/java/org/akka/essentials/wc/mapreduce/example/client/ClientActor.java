@@ -35,11 +35,11 @@ public class ClientActor extends UntypedActor {
 
 			// flush the buffers
 			for (int i = dataBuffer.size() - 1; i >= 0; i--) {
-				logger.info("sending to remote server");
+				//logger.info("sending to remote server");
 				remoteServer.tell(dataBuffer.remove(i), getSelf());
 			}
 			if (infoBuffer != null) {
-				logger.info("buffer sending info");
+				//logger.info("buffer sending info");
 				remoteServer.tell(infoBuffer, getSelf());
 				infoBuffer = null;
 			}
@@ -47,16 +47,16 @@ public class ClientActor extends UntypedActor {
 		} else
 		if (remoteServer == null) {
 			if (message instanceof TaskInfo) {
-				logger.info("info buffering");
+				//logger.info("info buffering");
 				infoBuffer = (TaskInfo) message;
 
 			} else {
-				logger.info("data buffering");
+				//logger.info("data buffering");
 				dataBuffer.add((String) message);
 			}
 		} else
 		if (message instanceof TaskInfo) {
-			logger.info("directly sending info");
+			//logger.info("directly sending info");
 			remoteServer.tell(message, getSelf());
 
 		} else
@@ -65,7 +65,7 @@ public class ClientActor extends UntypedActor {
 			getContext().system().shutdown();
 
 		} else {
-			logger.info("sending to remote server");
+			//logger.info("sending to remote server");
 			remoteServer.tell(message, getSelf());
 		}
 	}
