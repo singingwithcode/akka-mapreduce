@@ -1,6 +1,6 @@
 # Akka MapReduce
-### By: Matthew Klich, Brandon Do, Tinashe Tagarisa
-This project is 
+### Updated By: Matthew Klich, Brandon Do, Tinashe Tagarisa
+This project was updated to work with the latest version of Akka and test the timing of a MapReduce function in Akka.
 
 # Directions
 To toggle between the client and server, you need to edit the pom.xml file accordingly. It should commence in the following order:
