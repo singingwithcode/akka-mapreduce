@@ -26,8 +26,8 @@ The following should be commented out in the pom.xml file:
 ### Before Starting Client
 The following should be commented out in the pom.xml file:
 ```
-<mainClass>org.akka.essentials.wc.mapreduce.example.server.MapReduceServer</mainClass>
-<!--<mainClass>org.akka.essentials.wc.mapreduce.example.client.Client</mainClass>-->
+<!--<mainClass>org.akka.essentials.wc.mapreduce.example.server.MapReduceServer</mainClass>-->
+<mainClass>org.akka.essentials.wc.mapreduce.example.client.Client</mainClass>
 ```
 ## Commands
 ### To Clean: 
